@@ -7,7 +7,7 @@ const formEl = document.getElementById("form");
 
 const inputEl = document.getElementById("input");
 
-const soreEl = document.getElementById("sore");
+const soreEl = document.getElementById("score");
 
 let score = JSON.parse(localStorage.getItem("score"));
 
@@ -23,7 +23,7 @@ soreEl.innerText = `score: ${score}`
 
 formEl.addEventListener("submit",()=>{
     const userAns = +inputEl.value
-    if(userAns === corectAns){
+    if(userAns === correctAns){
         score++
         UpdateLocalStorage()
     }else{
